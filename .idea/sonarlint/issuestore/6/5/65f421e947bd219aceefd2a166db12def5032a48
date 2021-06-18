@@ -1,17 +1,0 @@
-
-Z	java:S106"9Replace this use of System.out or System.err by a logger.(Ş¤ùùÿÿÿÿ8ÛÂÊ„¡/
-O
-java:S1128"-Remove this unused import 'java.util.Arrays'.(î–˜Éüÿÿÿÿ8õİ¸Ù¡/
-U	java:S106"9Replace this use of System.out or System.err by a logger.(Ş´˜Ğ8üºáÖ¡/
-Y
-java:S1128"7Remove this unused import 'SberbankTest.entity.Person'.(¤ÀÆøÿÿÿÿ8ä¶·Ù¡/
-N
-java:S1128
-"1Remove this unused import 'java.math.BigDecimal'.(êêŠ8õİ¸Ù¡/
-{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ğÄÇ›şÿÿÿÿ8µÀ„¡/
-M
-java:S1128"0Remove this unused import 'java.util.ArrayList'.(÷‰îƒ8õİ¸Ù¡/
-L
-java:S1128"*Remove this unused import 'java.util.Map'.(¼è½Òşÿÿÿÿ8ä¶·Ù¡/
-Z
-java:S1128"8Remove this unused import 'java.util.stream.Collectors'.(Óóº´úÿÿÿÿ8ä¶·Ù¡/

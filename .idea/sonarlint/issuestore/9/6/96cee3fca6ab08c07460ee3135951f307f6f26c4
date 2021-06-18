@@ -1,18 +1,0 @@
-
-U	java:S106"9Replace this use of System.out or System.err by a logger.(¶ÎŸƒ8Ç×Ú¡/
-H
-java:S1168="+Return an empty collection instead of null.(¥¹ï8Íà“Û¡/
-X	java:S125"<This block of commented-out lines of code should be removed.(Èöá’8šŒ¡Û¡/
-N
-java:S16029",Remove useless curly braces around statement(„€”ÿÿÿÿÿ8€€éİ¡/
-Z	java:S106'"9Replace this use of System.out or System.err by a logger.(ÁÉ™Ëşÿÿÿÿ8Íà“Û¡/
-{	java:S120"ZRename this package name to match the regular expression '^[a-z_]+(\.[a-z_][a-z0-9_]*)*$'.(ğÄÇ›şÿÿÿÿ8¨¹†¡/
-U
-java:S1197C"8Move the array designator from the variable to the type.(™ÃÜŠ8Íà“Û¡/
-Z	java:S1067"9Replace this use of System.out or System.err by a logger.(¶èË”ÿÿÿÿÿ8Ê ¥İ¡/
-Z	java:S106"9Replace this use of System.out or System.err by a logger.(¶èË”ÿÿÿÿÿ8âìªÛ¡/
-
-java:S1319A"pThe return type of this method should be an interface such as "List" rather than the implementation "ArrayList".(Úãı„8Íà“Û¡/
-Z	java:S106"9Replace this use of System.out or System.err by a logger.(Ù‹’ãüÿÿÿÿ8Â¨²Ù¡/
-Q
-java:S2200""/Only the sign of the result should be examined.(ªË›ôıÿÿÿÿ8Íà“Û¡/
