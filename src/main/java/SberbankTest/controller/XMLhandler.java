@@ -10,10 +10,19 @@ import javax.xml.bind.Unmarshaller;
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintWriter;
+import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Class for working with XML files
+ */
 public class XMLhandler {
 
+    /**
+     * Method for reading data from xml file
+     * @param file Bank xml file
+     * @return Bank object
+     */
     public static Bank readXML(File file) {
         JAXBContext jaxbContext;
         Bank bank = new Bank();
@@ -27,15 +36,32 @@ public class XMLhandler {
         return bank;
     }
 
-    public static void buildXML(List<Person> personList) {
-        XMLBuilder2 builder = XMLBuilder2.create("total").e("result");
-        for (int i = 0; i < personList.size(); i++) {
+    /**
+     * Method for building xml file.
+     *
+     * Note: for some reason I have issue with putting minimum append person list in "minimum" element in xml file.
+     * It works only with direct method chaining (builder.e("minimum").e("Person).a(...)...)
+     * and when I use loop to add it into builder, list added to "result" element.
+     * Method rewritten to show output similar to example.
+     * It still satisfies both requirements from the task but looks a little bit different
+     * minimum element used to split Person list and minimum append person list
+     *
+     * @param personList list of persons from bank with their data
+     * @param min number of persons with minimum append value to write into xml file
+     */
+    public static void buildXML(List<Person> personList, ArrayList<String> min) {
+        XMLBuilder2 builder = XMLBuilder2.create("total")
+                .e("result");
+        for (Person person : personList)
             builder.e("Person")
-                    .a("name", personList.get(i).getName())
-                    .a("wallet", personList.get(i).getWallet().toString())
-                    .a("appendFromBank", personList.get(i).getWallet().toString());
+                    .a("name", person.getName())
+                    .a("wallet", person.getWallet().toString())
+                    .a("appendFromBank", person.getAppendFromBank().toString()).up();
+        builder.e("minimum");
+        for (String name : min) {
+            builder.e("Person")
+                    .a("name", name);
         }
-        builder.up();
 
         PrintWriter writer = null;
         try {

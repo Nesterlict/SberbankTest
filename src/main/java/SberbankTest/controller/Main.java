@@ -2,8 +2,9 @@ package SberbankTest.controller;
 
 import SberbankTest.entity.Bank;
 import java.io.File;
-import java.math.BigDecimal;
 
+import static SberbankTest.controller.Split.mainSplit;
+import static SberbankTest.controller.XMLhandler.buildXML;
 import static SberbankTest.controller.XMLhandler.readXML;
 
 public class Main {
@@ -13,9 +14,8 @@ public class Main {
         for(int i=0;i<bank.getPersonList().size();i++){
             bank.getPersonList().get(i).setIndex(i);
         }
-
-        Split split = new Split();
-        split.mainSplit(bank.getPersonList(), BigDecimal.valueOf(2));
+        mainSplit(bank.getPersonList(), bank.getWallet());
+        buildXML(bank.getPersonList(),Split.minAppend(bank.getPersonList(),3));
 
     }
 }
