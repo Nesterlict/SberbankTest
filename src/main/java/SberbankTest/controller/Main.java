@@ -4,8 +4,7 @@ import SberbankTest.entity.Bank;
 import java.io.File;
 
 import static SberbankTest.controller.Split.mainSplit;
-import static SberbankTest.controller.XMLhandler.buildXML;
-import static SberbankTest.controller.XMLhandler.readXML;
+import static SberbankTest.controller.XMLhandler.*;
 
 public class Main {
     public static void main(String[] args) {
@@ -16,6 +15,6 @@ public class Main {
         }
         mainSplit(bank.getPersonList(), bank.getWallet());
         buildXML(bank.getPersonList(),Split.minAppend(bank.getPersonList(),3));
-
+        buildXMLCorrectly(bank.getPersonList(),Split.minAppend(bank.getPersonList(),3));
     }
 }
